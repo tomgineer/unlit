@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@source inline("text-base-content/45 -rotate-45");
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../assets/fonts/bebas-neue-v16-latin-regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url("../assets/fonts/fraunces-v38-latin-regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@layer base {
+    html {
+        font-family: "Bebas Neue", sans-serif;
+    }
+    p {
+        font-family: "Fraunces", serif;
+    }
+    body {
+        background-image: radial-gradient(650px circle at 20% 0%, rgba(255,255,255,.15), transparent);
+        background-repeat: no-repeat;
+    }
+}
+
+/* Display */
+
+.custom-display {
+    @apply flex flex-col items-center justify-center text-center p-4 bg-base-300 border border-base-content/15
+        rounded-full shadow-xl aspect-square hover:rotate-0 transition-all;
+    background-image: url("../assets/gfx/bg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.custom-display > span:first-child {
+    @apply text-5xl 2xl:text-7xl;
+}
+
+.monitors-2 .custom-display > span:first-child {
+    @apply text-5xl xl:text-3xl 2xl:text-4xl;
+}
+
+.custom-display > span:last-child {
+    @apply leading-tight tracking-wide text-base-content/65;
+}
+
+/* Monitors Set */
+
+.monitors {
+    @apply grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3 my-4 sm:gap-4;
+}
+
+.monitors-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-3 my-4 sm:gap-4;
+}

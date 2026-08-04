@@ -1,0 +1,26 @@
+{
+    "name": "unlit",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npm-run-all --parallel dev:css dev:js",
+        "dev:css": "tailwindcss -i ./tailwind/input.css -o ./public/css/tailwind.css --watch",
+        "dev:js": "esbuild public/js/src/*.js --bundle --outdir=public/js --entry-names=[name]-dist --watch",
+        "build": "npm-run-all build:css build:js",
+        "build:css": "tailwindcss -i ./tailwind/input.css -o ./public/css/tailwind.css --minify",
+        "build:js": "esbuild public/js/src/*.js --bundle --minify --outdir=public/js --entry-names=[name]-dist"
+    },
+    "keywords": [],
+    "author": "Tom Papatolis",
+    "license": "MIT",
+    "type": "commonjs",
+    "devDependencies": {
+        "@tailwindcss/cli": "^4.3.3",
+        "@tailwindcss/typography": "^0.5.20",
+        "daisyui": "^5.7.8",
+        "esbuild": "^0.28.1",
+        "npm-run-all": "^4.1.5",
+        "tailwindcss": "^4.3.3"
+    }
+}
