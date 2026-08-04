@@ -81,4 +81,7 @@ After changing these values, run `npm run build` or keep `npm run dev` running.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Project code is licensed under MIT. See [LICENSE](LICENSE).
+
+Bundled fonts are licensed separately under the SIL Open Font License 1.1.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
